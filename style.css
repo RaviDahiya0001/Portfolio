@@ -1,0 +1,409 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 12%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.logo span {
+    color: orangered;
+}
+
+.logo:hover {
+    color: orangered;
+    text-shadow: 0 0 10px orangered, 0 0 20px orangered, 0 0 30px orangered, 0 0 40px orangered;
+    transform: scale(1.1);
+}
+
+.navbar a {
+    font-size: 15px;
+    color: white;
+    font-weight: 500;
+    margin: 0 15px;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: orangered;
+    border-bottom: 3px solid orangered;
+}
+
+.btn-1 {
+    padding: 12px 25px;
+    margin: 5px;
+    background: black;
+    color: white;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-1:hover {
+    background: white;
+    color: black;
+    box-shadow: 0 0 10px orangered;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 150px 12% 50px;
+    min-height: 100vh;
+    background: white;
+    color: black;
+}
+
+.home-content h1,
+.home-content h3,
+.home-content p {
+    color: black;
+}
+
+.home-content h1 span {
+    color: orangered;
+}
+
+.img-box img {
+    width: 300px;
+    border-radius: 50%;
+    box-shadow: 0 0 25px orangered;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+    padding: 100px 12%;
+    background: black;
+    color: white;
+}
+
+.about-content h2,
+.about-content h3,
+.about-content p {
+    color: white;
+}
+
+.skills {
+    padding: 80px 12%;
+    text-align: center;
+    background: white;
+    color: black;
+}
+
+.skills .heading {
+    font-size: 45px;
+    margin-bottom: 40px;
+    color: orangered;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+.skill-card {
+    background: #111;
+    color: white;
+    padding: 20px 25px;
+    border-radius: 10px;
+    min-width: 150px;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px orangered;
+}
+
+.projects {
+    padding: 80px 12%;
+    text-align: center;
+    background: black;
+    color: white;
+}
+
+.projects h2 {
+    color: orangered;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    margin-top: 40px;
+}
+
+.project-card {
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 250px;
+    transition: 0.3s;
+    color: white;
+}
+
+.project-card h3 {
+    color: orangered;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px orangered;
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 200;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    background-color: #111;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid orangered;
+    width: 80%;
+    border-radius: 10px;
+    color: white;
+}
+
+.close {
+    color: orangered;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: white;
+}
+
+.education {
+    padding: 80px 12%;
+    background: white;
+    color: black;
+    text-align: center;
+}
+
+.education h2 {
+    color: orangered;
+}
+
+.education-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    margin-top: 40px;
+}
+
+.education-card {
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 250px;
+    transition: 0.3s;
+    color: white;
+}
+
+.education-card h3 {
+    color: orangered;
+    margin-bottom: 8px;
+}
+
+.education-card p {
+    color: white;
+}
+
+.education-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px orangered;
+}
+
+.contact-form {
+    padding: 20px 12%;
+    background: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form h2 {
+    color: orangered;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-form form {
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
+}
+
+.contact-form .input-box {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: none;
+    background: #222;
+    color: white;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #ccc;
+}
+
+.contact-form input[type="submit"] {
+    background: orangered;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.contact-form input[type="submit"]:hover {
+    background: white;
+    color: black;
+}
+
+.footer {
+    background: black;
+    padding: 40px 12%;
+    text-align: center;
+}
+
+.footer .social a {
+    font-size: 24px;
+    color: white;
+    margin: 0 8px;
+    transition: 0.3s;
+}
+
+.footer .social a:hover {
+    color: orangered;
+    transform: scale(1.2);
+}
+
+.footer ul {
+    margin: 15px 0;
+    padding: 0;
+}
+
+.footer ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.footer .copyright {
+    color: white;
+    margin-top: 10px;
+}
+
+/* Privacy Policy Section */
+.privacy {
+    padding: 60px 10%;
+    background: #111;
+    color: #fff;
+}
+
+.privacy .heading {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.privacy .heading span {
+    color: #00eeff;
+}
+
+.privacy p {
+    margin-top: 15px;
+    line-height: 1.8;
+    font-size: 16px;
+    text-align: justify;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+    .home, .about {
+        flex-direction: column;
+        gap: 20px;
+        padding: 120px 8% 50px;
+    }
+
+    .img-box img {
+        width: 200px;
+    }
+
+    .skills-container, .projects-container, .education-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card, .education-card, .skill-card {
+        min-width: 80%;
+    }
+}
