@@ -10,6 +10,16 @@
 </head>
 
 <body>
+    <script>
+    const password = "Ravi@0001";
+    let userPassword = prompt("Enter the password to access this portfolio:");
+
+    if(userPassword !== password){
+        alert("Incorrect password! Access denied.");
+        window.location.href = "https://www.google.com"; // ya koi dusra fallback page
+    }
+</script>
+
     <header class="header">
         <a href="#home" class="logo"><span>Ravi Dahiya</span></a>
         <nav class="navbar">
