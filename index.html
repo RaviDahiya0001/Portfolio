@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-
 <body>
     <script>
         const password = "Ravi@0001";
@@ -37,7 +35,6 @@
             <h1>I'm <span>Ravi</span> <br>Cybersecurity Enthusiast</h1>
             <p>I am a fresher with strong interest in cybersecurity, learning ethical hacking,
                 network security, and vulnerability assessment.<br>My focus is on building practical knowledge through real-world exercises, cybersecurity labs, and tools used by professionals.</p>
-            <br>
             <div class="btn-box">
                 <a href="https://drive.google.com/uc?export=view&id=1w0xBrmobM1zACO26I1nXWKN38Ee3o8wM" class="btn-1" download>DOWNLOAD CV</a>
             </div>
@@ -145,6 +142,27 @@
         </ul>
         <p class="copyright">© 2025 Ravi Dahiya | All Rights Reserved</p>
     </footer>
+
+<script>
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".navbar a");
+window.addEventListener("scroll", () => {
+    let current = "";
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionHeight = section.clientHeight;
+        if(scrollY >= sectionTop && scrollY < sectionTop + sectionHeight){
+            current = section.getAttribute("id");
+        }
+    });
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+        if(link.getAttribute("href") === "#" + current){
+            link.classList.add("active");
+        }
+    });
+});
+</script>
 
 </body>
 </html>
