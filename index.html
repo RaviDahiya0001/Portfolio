@@ -11,14 +11,13 @@
 
 <body>
     <script>
-    const password = "Ravi@0001";
-    let userPassword = prompt("Enter the password to access this portfolio:");
-
-    if(userPassword !== password){
-        alert("Incorrect password! Access denied.");
-        window.location.href = "https://www.google.com"; // ya koi dusra fallback page
-    }
-</script>
+        const password = "Ravi@0001";
+        let userPassword = prompt("Enter the password to access this portfolio:");
+        if(userPassword !== password){
+            alert("Incorrect password! Access denied.");
+            window.location.href = "https://www.google.com";
+        }
+    </script>
 
     <header class="header">
         <a href="#home" class="logo"><span>Ravi Dahiya</span></a>
@@ -38,10 +37,9 @@
             <h1>I'm <span>Ravi</span> <br>Cybersecurity Enthusiast</h1>
             <p>I am a fresher with strong interest in cybersecurity, learning ethical hacking,
                 network security, and vulnerability assessment.<br>My focus is on building practical knowledge through real-world exercises, cybersecurity labs, and tools used by professionals.</p>
-                <br>
+            <br>
             <div class="btn-box">
-                <a href="https://drive.google.com/uc?export=view&id=1w0xBrmobM1zACO26I1nXWKN38Ee3o8wM
-" class="btn-1" download>DOWNLOAD CV</a>
+                <a href="https://drive.google.com/uc?export=view&id=1w0xBrmobM1zACO26I1nXWKN38Ee3o8wM" class="btn-1" download>DOWNLOAD CV</a>
             </div>
         </div>
         <div class="img-box">
@@ -75,63 +73,29 @@
     </section>
 
     <section class="projects" id="projects">
-    <h2 class="heading">MY <span>PROJECTS</span></h2>
-    <div class="projects-container">
+        <h2 class="heading">MY <span>PROJECTS</span></h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <h3>Port Scanner</h3>
+                <p>Python-based tool to identify open ports and running services on a network.</p>
+                <a href="https://github.com/RaviDahiya0001/port-scanner" target="_blank" class="btn-1">View on GitHub</a>
+                <a href="https://port-scanner-dgyfeutgnpbntscnfhhbne.streamlit.app/" target="_blank" class="btn-1" style="margin-left:10px;">Live Demo</a>
+            </div>
 
-        <!-- PORT SCANNER -->
-        <div class="project-card">
-            <h3>Port Scanner</h3>
-            <p>Python-based tool to identify open ports and running services on a network.</p>
+            <div class="project-card">
+                <h3>Password Strength Checker</h3>
+                <p>Checks password strength and suggests improvements.</p>
+                <a href="https://RaviDahiya0001.github.io/password-strength-checker/" target="_blank" class="btn-1">Live Demo</a>
+                <a href="https://github.com/RaviDahiya0001/password-strength-checker" target="_blank" class="btn-1">View on GitHub</a>
+            </div>
 
-            <!-- GitHub Repo -->
-            <a href="https://github.com/RaviDahiya0001/port-scanner" target="_blank" class="btn-1">
-                View on GitHub 
-            </a>
-
-            <!-- Live Demo -->
-            <a href="https://port-scanner-dgyfeutgnpbntscnfhhbne.streamlit.app/" target="_blank" class="btn-1" style="margin-left: 10px;">
-                Live Demo
-            </a>
+            <div class="project-card">
+                <h3>Packet Sniffer</h3>
+                <p>Captures and analyzes network traffic packets using Python and Scapy.</p>
+                <a href="https://github.com/RaviDahiya0001/packet-sniffer" target="_blank" class="btn-1">View on GitHub</a>
+            </div>
         </div>
-
-        <!-- PASSWORD STRENGTH CHECKER -->
-        <div class="project-card">
-            <h3>Password Strength Checker</h3>
-            <p>Checks password strength and suggests improvements.</p>
-
-            <!-- Live Demo -->
-            <a href="https://RaviDahiya0001.github.io/password-strength-checker/" target="_blank" class="btn-1">
-                Live Demo
-            </a>
-
-            <!-- GitHub Code -->
-            <a href="https://github.com/RaviDahiya0001/password-strength-checker" target="_blank" class="btn-1">
-                View on GitHub
-            </a>
-        </div>
-
-       <!-- PACKET SNIFFER -->
-<div class="project-card">
-    <h3>Packet Sniffer</h3>
-    <p>Captures and analyzes network traffic packets using Python and Scapy.</p>
-    <!-- GitHub Code Link -->
-    <a href="https://github.com/RaviDahiya0001/packet-sniffer" target="_blank" class="btn-1">
-        View on GitHub
-    </a>
-</div>
-
-</div>
-</section>
-
-<div id="project-modal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h3 id="modal-title"></h3>
-        <p id="modal-desc"></p>
-    </div>
-</div>
-
-
+    </section>
 
     <section class="education" id="education">
         <h2 class="heading">MY <span>EDUCATION</span></h2>
@@ -168,18 +132,6 @@
         </p>
     </section>
 
-    <!-- Privacy Policy Modal -->
-    <div id="privacy-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2 class="heading">PRIVACY <span>POLICY</span></h2>
-            <div class="privacy-content">
-                <p>Your privacy is important to me. I do not share your personal information with third parties. Any data submitted through the contact form will only be used to respond to your inquiry and will not be stored or used for any other purpose.</p>
-                <p>By using this portfolio website, you agree to this privacy policy and consent to the processing of your information as described above.</p>
-            </div>
-        </div>
-    </div>
-
     <footer class="footer">
         <div class="social">
             <a href="#"><i class='bx bxl-facebook-circle'></i></a>
@@ -190,98 +142,9 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#about">About Me</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="#" id="privacy-link">Privacy Policy</a></li>
         </ul>
         <p class="copyright">© 2025 Ravi Dahiya | All Rights Reserved</p>
     </footer>
 
-    <script>
-        const modal = document.getElementById("project-modal");
-        const modalTitle = document.getElementById("modal-title");
-        const modalDesc = document.getElementById("modal-desc");
-        const closeBtn = modal.querySelector(".close");
-        const viewBtns = document.querySelectorAll(".view-btn");
-
-        viewBtns.forEach(btn => {
-            btn.addEventListener("click", () => {
-                modal.style.display = "block";
-                modalTitle.innerText = btn.dataset.title;
-                modalDesc.innerText = btn.dataset.desc;
-            });
-        });
-
-        closeBtn.addEventListener("click", () => {
-            modal.style.display = "none";
-        });
-
-        window.addEventListener("click", (e) => {
-            if (e.target == modal) modal.style.display = "none";
-        });
-
-        const form = document.getElementById('contactForm');
-        const successMessage = document.getElementById('successMessage');
-
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const formData = new FormData(form);
-
-            fetch(form.action, {
-                method: form.method,
-                body: formData,
-                headers: { 'Accept': 'application/json' }
-            }).then(response => {
-                if (response.ok) {
-                    successMessage.style.display = 'block';
-                    form.reset();
-                } else {
-                    response.json().then(data => {
-                        alert("Oops! There was a problem submitting your form.");
-                    });
-                }
-            }).catch(error => {
-                alert("Oops! There was a problem submitting your form.");
-            });
-        });
-
-        const sections = document.querySelectorAll("section");
-        const navLinks = document.querySelectorAll(".navbar a");
-
-        window.addEventListener("scroll", () => {
-            let current = "";
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 100;
-                const sectionHeight = section.clientHeight;
-                if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-                    current = section.getAttribute("id");
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove("active");
-                if (link.getAttribute("href") === "#" + current) {
-                    link.classList.add("active");
-                }
-            });
-        });
-
-        // Privacy Policy Modal Script
-        const privacyModal = document.getElementById("privacy-modal");
-        const privacyLink = document.getElementById("privacy-link");
-        const privacyClose = privacyModal.querySelector(".close");
-
-        privacyLink.addEventListener("click", (e) => {
-            e.preventDefault();
-            privacyModal.style.display = "block";
-        });
-
-        privacyClose.addEventListener("click", () => {
-            privacyModal.style.display = "none";
-        });
-
-        window.addEventListener("click", (e) => {
-            if (e.target == privacyModal) privacyModal.style.display = "none";
-        });
-    </script>
 </body>
-
 </html>

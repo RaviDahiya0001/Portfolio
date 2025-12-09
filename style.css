@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    text-decoration: none;
 }
 
 body {
@@ -27,7 +26,7 @@ body {
     font-size: 25px;
     color: white;
     font-weight: 600;
-    transition: 0.3s ease;
+    transition: 0.3s;
 }
 
 .logo span {
@@ -116,6 +115,11 @@ body {
     color: white;
 }
 
+.img-about img {
+    width: 250px;
+    border-radius: 10px;
+}
+
 .skills {
     padding: 80px 12%;
     text-align: center;
@@ -193,7 +197,6 @@ body {
     box-shadow: 0 0 25px orangered;
 }
 
-/* MODAL */
 .modal {
     display: none;
     position: fixed;
@@ -361,7 +364,6 @@ body {
     margin-top: 10px;
 }
 
-/* Privacy Policy Section */
 .privacy {
     padding: 60px 10%;
     background: #111;
@@ -386,7 +388,6 @@ body {
     text-align: justify;
 }
 
-/* RESPONSIVE */
 @media screen and (max-width: 768px) {
     .home, .about {
         flex-direction: column;
@@ -395,6 +396,10 @@ body {
     }
 
     .img-box img {
+        width: 200px;
+    }
+
+    .img-about img {
         width: 200px;
     }
 
